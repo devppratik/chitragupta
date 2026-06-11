@@ -30,18 +30,16 @@ cg install code-review@^2.1.0
 
 **The Problem:**
 
-I work with Claude Code across 20+ repositories. Every time I build a useful skill (security scanner, git workflow automation), I copy-paste it to other repos. Then:
-- Updates overwrite customizations (my `.claude/` configs get nuked)
-- No way to share private skills with my team
-- Can't version or roll back broken updates
-- Manual dependency tracking (this skill needs that MCP tool)
-- Claude Marketplace only handles public, per-machine installs
+I work with AI tools (Claude Code, Cursor, Copilot) across 20+ repositories. Git repos work for basic sharing, but:
 
-**It's like npm didn't exist and we copy-pasted `node_modules/` between projects.**
+- **No dependency resolution** - Skill A needs MCP tool B → manual tracking, no lockfile
+- **No customization preservation** - Updates overwrite custom edits, template variables need manual scripts
+- **No multi-platform** - Write for Claude, manually port to Cursor/Copilot
+- **No semver constraint solving** - `^1.2.0` finds latest 1.x → manual with git tags
 
 **The Solution:**
 
-Chitragupta is `npm` for AI assets. Publish packages to a team registry, install with dependency resolution, preserve customizations through templates, pin versions, and automate distribution.
+Chitragupta is `npm` for AI assets. Publish to team registry, install with dependency resolution, preserve customizations through templates, pin versions with semver, compile for multiple platforms.
 
 ---
 
