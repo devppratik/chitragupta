@@ -1,0 +1,58 @@
+# Binaries
+/chitra
+/chitra-server
+/cg
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# Build artifacts
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Registry storage (local development)
+registry/packages/*
+!registry/packages/.gitkeep
+
+# Server storage
+storage/
+*.db
+*.db-shm
+*.db-wal
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI Related Folders
+.claude/
+.gpt/
+.anthropic/
+.openai/
+.gemini/
+.ollama/
+.replicate/
+.together/
+.ai/
+ai-cache/
+model-cache/
